@@ -14,15 +14,15 @@ jobs:
           java-version: 1.8
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+<<<<<<< HEAD
 name: remote ssh command
+=======
+>>>>>>> 1eb58c2e8135da0c7d5da0fd0b21e5c687944ac6
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - name: executing remote ssh commands using ssh key zome
-      uses: appleboy/ssh-action@master
-      with:
+
+      
+      - uses: appleboy/ssh-action@master
+          with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
